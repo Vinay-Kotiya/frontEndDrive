@@ -40,6 +40,9 @@ const Login = () => {
         { username, password },
         {
           withCredentials: true, // Include cookies with the request
+          headers: {
+            "Content-Type": "application/json",
+          },
         }
       )
       .then((result) => {
