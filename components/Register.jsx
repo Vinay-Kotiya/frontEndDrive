@@ -15,7 +15,7 @@ const Register = () => {
     // console.log(formData);
     try {
       const response = await axios.post(
-        "http://localhost:3333/user/register",
+        "https://drivecloneapi.vercel.app/user/register",
         { username, email, password },
         { withCredentials: true }
       );

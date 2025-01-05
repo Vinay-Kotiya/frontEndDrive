@@ -32,9 +32,12 @@ const Home = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:3333/home", {
-          withCredentials: true, // Include cookies with the request
-        });
+        const response = await axios.get(
+          "https://drivecloneapi.vercel.app/home",
+          {
+            withCredentials: true, // Include cookies with the request
+          }
+        );
         // console.log("Data received:", response.data);
         setFiles(response.data.files);
         setUsername(response.data.username);
@@ -66,7 +69,7 @@ const Home = () => {
     try {
       showLoader();
       const response = await axios.post(
-        "http://localhost:3333/upload",
+        "https://drivecloneapi.vercel.app/upload",
         formData,
         {
           withCredentials: true, // Include cookies with the request
@@ -96,9 +99,12 @@ const Home = () => {
     try {
       // console.log("Downloading file", id);
       showLoader();
-      const response = await axios.get(`http://localhost:3333/download/${id}`, {
-        withCredentials: true,
-      });
+      const response = await axios.get(
+        `https://drivecloneapi.vercel.app/download/${id}`,
+        {
+          withCredentials: true,
+        }
+      );
       // console.log("Data received:", response.data);
       window.location.href = response.data;
       hiddenLoader();
@@ -113,9 +119,12 @@ const Home = () => {
   const logoutHandler = async () => {
     try {
       showLoader();
-      const response = await axios.get("http://localhost:3333/user/logout", {
-        withCredentials: true,
-      });
+      const response = await axios.get(
+        "https://drivecloneapi.vercel.app/user/logout",
+        {
+          withCredentials: true,
+        }
+      );
       // console.log(response.data);
       hiddenLoader();
       navigate("/user/login");
