@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 // import user from "../../drive_MEN/models/user.model";
+// import dotenv from "dotenv";
+// dotenv.config();
 const Login = () => {
   // const [username, setUserName] = useState("");
   // const [password, setPassword] = useState("");
@@ -36,6 +38,7 @@ const Login = () => {
 
     axios
       .post(
+        // `${process.env.DRIVE_API_URL}/user/login`,
         "https://drivecloneapi.vercel.app/user/login",
         { username, password },
         {
@@ -50,9 +53,9 @@ const Login = () => {
         // console.log(result);
 
         // Store token in localStorage (for simplicity here, can also use cookies)
-        if (result.data.token) {
-          localStorage.setItem("token", result.data.token); // Store JWT token
-        }
+        // if (result.data.token) {
+        //   localStorage.setItem("token", result.data.token); // Store JWT token
+        // }
 
         // Redirect to the home page
         navigate("/home");
