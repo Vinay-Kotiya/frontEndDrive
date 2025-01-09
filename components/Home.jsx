@@ -145,7 +145,7 @@ const Home = () => {
             <img src="https://www.svgrepo.com/show/199956/loading-loader.svg" />
           </div>
         </div>
-        <main className="container  rounded   mx-auto min-h-screen h-screen p-4  w-full">
+        <main className="container  rounded   mx-auto min-h-screen h-screen p-4 w-full">
           <div className="flex items-center justify-between">
             <button
               className="bg-blue-500 hover:bg-blue-700 rounded p-2 text-white font-bold"
@@ -265,7 +265,7 @@ const Home = () => {
         </div>
         <% }) %>
       </div> */}
-          <div className="files overflow-y-auto h-full flex flex-col   gap-4 mt-4">
+          <div className="files overflow-y-auto h-full flex flex-col gap-4 mt-4 ">
             {files.map((file, idx) => {
               return (
                 <div
