@@ -109,9 +109,6 @@ const Register = () => {
             Back
           </a>
         </form>
-        <a href="/user/login" className="text-blue-500 mt-3 flex">
-          Back
-        </a>
       </div>
     </>
   );
