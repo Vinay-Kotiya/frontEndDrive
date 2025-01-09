@@ -10,9 +10,7 @@ const Register = () => {
   const [password, setPassword] = useState("");
   const onSubmitHandler = async (e) => {
     e.preventDefault();
-    // const form = e.target;
-    // const formData = new FormData(form);
-    // console.log(formData);
+
     try {
       const response = await axios.post(
         "https://drivecloneapi.vercel.app/user/register",
@@ -25,22 +23,6 @@ const Register = () => {
       console.log(error);
       alert("Error in registration please try again");
     }
-
-    //   const response = await axios
-    //     .post(
-    //       "http://localhost:3333/user/register",
-    //       { username, email, password },
-    //       {
-    //         withCredentials: true,
-    //       }
-    //     )
-    //     .then((result) => {
-    //       console.log(result.data.massage);
-    //       navigate("/user/login");
-    //     })
-    //     .catch((error) => {
-    //       console.log(error);
-    //     });
   };
 
   return (
@@ -112,31 +94,24 @@ const Register = () => {
               name="password"
             />
           </div>
-          {/* <!-- <div className="flex items-start mb-5">
-        <div className="flex items-center h-5">
-          <input
-            id="remember"
-            type="checkbox"
-            value=""
-            className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800"
-            required
-          />
-        </div>
-        <label
-          for="remember"
-          className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-          >Remember me</label
-        >
-      </div> --> */}
+
           <button
             type="submit"
             className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
           >
-            Submit
+            Register
           </button>
-        </form>
 
-        {/* <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script> */}
+          <a
+            href="/user/login"
+            className="text-white bg-red-700 hover:bg-red-800  ml-3 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          >
+            Back
+          </a>
+        </form>
+        <a href="/user/login" className="text-blue-500 mt-3 flex">
+          Back
+        </a>
       </div>
     </>
   );
