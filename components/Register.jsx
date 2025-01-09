@@ -94,20 +94,22 @@ const Register = () => {
               name="password"
             />
           </div>
-
-          <button
-            type="submit"
-            className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-          >
-            Register
-          </button>
-
-          <a
-            href="/user/login"
-            className="text-white bg-red-700 hover:bg-red-800  ml-3 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-          >
-            Back
-          </a>
+          <div className="flex  sm:gap-0 flex-col  md:gap-6 md:flex-row">
+            <button
+              type="submit"
+              className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4  mt-2 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            >
+              Register
+            </button>
+            <a href="/user/login">
+              <button
+                type="button"
+                className="text-white bg-red-700 hover:bg-red-800  gap-3 sm mt-2 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              >
+                Back
+              </button>
+            </a>
+          </div>
         </form>
       </div>
     </>
