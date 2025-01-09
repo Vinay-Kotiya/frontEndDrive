@@ -63,7 +63,7 @@ const Login = () => {
       .catch((error) => {
         setLoading(false); // Stop loading
         console.error(error);
-
+        alert("Username or Password is incorrect, Please try again");
         // Show a user-friendly error message
         setError("Login failed. Please check your credentials.");
       });
